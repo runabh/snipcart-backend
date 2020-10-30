@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello world</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.css"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <button class="snipcart-checkout">Checkout</button>
+      <button class="snipcart-customer-signin">My account</button>
+      <div>Items in cart : <span class="snipcart-items-count"></span></div>
+      <div>Cart Total : <span class="snipcart-total-price"></span></div>
+    </div>
+    <div>
+      <iframe
+        src="https://runabh.github.io/snipcart-iframe/index.html"
+        id="filecontainer"
+      ></iframe>
+    </div>
+
+    <div
+      hidden
+      id="snipcart"
+      data-api-key="NDgyZDYzNTAtZWE2My00ZjBiLWFlNDEtMDVhMGJjYWQxOTMwNjM3Mzk1NjkzNDg1Njg1OTg3"
+    ></div>
+    <script
+      async
+      src="https://cdn.snipcart.com/themes/v3.0.23/default/snipcart.js"
+    ></script>
+    <script>
+      function add(val) {
+        console.log("parent function called", val);
+        Snipcart.api.cart.items.add({
+          id: "id" + val,
+          name: "Smartphone" + val,
+          description: "Smartphone" + val + " added from iframe",
+          url: "https://snipcart-json.s3.amazonaws.com/abc.json",
+          price: "399.00",
+        });
+      }
+    </script>
+  </body>
+</html>

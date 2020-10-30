@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello world</title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.snipcart.com/scripts/2.0/snipcart.js"
+      data-api-key="NDgyZDYzNTAtZWE2My00ZjBiLWFlNDEtMDVhMGJjYWQxOTMwNjM3Mzk1NjkzNDg1Njg1OTg3"
+      id="snipcart"
+    ></script>
+
+    <link
+      href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <a href="#" class="snipcart-checkout">Click here to checkout</a>
+      <button class="snipcart-customer-signin">My account</button>
+      <div class="snipcart-summary">
+        Number of items: <span class="snipcart-total-items"></span> Total price:
+        <span class="snipcart-total-price"></span>
+      </div>
+    </div>
+    <div>
+      <iframe
+        src="https://runabh.github.io/snipcart-iframe/index.html"
+        id="filecontainer"
+      ></iframe>
+      <!--       <button class="snipcart-add-item"
+  data-item-id="starry-night"
+  data-item-price="79.99"
+  data-item-url="/paintings/starry-night"
+  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+  data-item-image="https://miro.medium.com/max/820/1*3qu9l2JiQh0EduFJun1iig.jpeg"
+  data-item-name="The Starry Night">
+  Add to cart
+</button> -->
+    </div>
+
+    <script>
+      function add(val) {
+        console.log("parent function called", val);
+        Snipcart.api.items.add({
+          id: "id" + val,
+          name: "Smartphone" + val,
+          description: "Smartphone" + val + " added from iframe",
+          url: "https://snipcart-json.s3.amazonaws.com/abc.json",
+          price: "399.00",
+        });
+      }
+    </script>
+  </body>
+</html>
