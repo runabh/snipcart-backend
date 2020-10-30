@@ -11,5 +11,8 @@ app.get("/v3", function (req, res) {
 app.get("/iframe", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "iframe.html"));
 });
+app.get("/abc.json", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "abc.json"));
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT);

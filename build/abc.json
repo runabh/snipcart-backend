@@ -1,0 +1,17 @@
+[
+  {
+    "id": "id1",
+    "price": "399.00",
+    "url": "https://snipcart-json.s3.amazonaws.com/abc.json"
+  },
+  {
+    "id": "id2",
+    "price": "399.00",
+    "url": "https://snipcart-json.s3.amazonaws.com/abc.json"
+  },
+  {
+    "id": "id3",
+    "price": "399.00",
+    "url": "https://snipcart-json.s3.amazonaws.com/abc.json"
+  }
+]

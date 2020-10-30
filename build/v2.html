@@ -23,26 +23,16 @@
   <body>
     <div class="content">
       <a href="#" class="snipcart-checkout">Click here to checkout</a>
-      <button class="snipcart-customer-signin">My account</button>
       <div class="snipcart-summary">
-        Number of items: <span class="snipcart-total-items"></span> Total price:
-        <span class="snipcart-total-price"></span>
+        <div>Number of items: <span class="snipcart-total-items"></span></div>
+        <div>Total price: <span class="snipcart-total-price"></span></div>
       </div>
     </div>
     <div>
       <iframe
-        src="https://runabh.github.io/snipcart-iframe/index.html"
+        src="https://snipcart-testing1.herokuapp.com/iframe"
         id="filecontainer"
       ></iframe>
-      <!--       <button class="snipcart-add-item"
-  data-item-id="starry-night"
-  data-item-price="79.99"
-  data-item-url="/paintings/starry-night"
-  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
-  data-item-image="https://miro.medium.com/max/820/1*3qu9l2JiQh0EduFJun1iig.jpeg"
-  data-item-name="The Starry Night">
-  Add to cart
-</button> -->
     </div>
 
     <script>
@@ -52,7 +42,7 @@
           id: "id" + val,
           name: "Smartphone" + val,
           description: "Smartphone" + val + " added from iframe",
-          url: "https://snipcart-json.s3.amazonaws.com/abc.json",
+          url: "https://snipcart-testing1.herokuapp.com/abc.json",
           price: "399.00",
         });
       }
